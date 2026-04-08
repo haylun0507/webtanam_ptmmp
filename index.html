@@ -361,9 +361,9 @@
                     <tr>\
                         <td colspan="2">' + (feature.properties['Tanggal Geotag'] !== null ? autolinker.link(String(feature.properties['Tanggal Geotag']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Nama_Foto'] !== null ? '<img src="images/' + String(feature.properties['Nama_Foto']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '">' : '') + '</td>\
-                    </tr>\
+					<tr>\
+						<td colspan="2">' + (feature.properties['Nama_Foto'] !== null ? '<img src="images/' + String(feature.properties['Nama_Foto']).replace('images/', '') + '" style="width: 130px; height: auto; border-radius: 10px; display: block; margin-left: auto; margin-right: auto;">' : '') + '</td>\
+					</tr>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Perusahaan'] !== null ? autolinker.link(String(feature.properties['Perusahaan']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
